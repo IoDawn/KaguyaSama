@@ -64,7 +64,7 @@ from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
 Hai yang disana! 
-Grup Manajer adalah Bot *yang paling lengkap* dan *gratis* untuk membantumu *mengelola* grup anda dengan lebih mudah dan *aman*! 
+[Grup Manajer](https://t.me/GrupManajerBot) adalah Bot *yang paling lengkap* dan *gratis* untuk membantumu *mengelola* grup anda dengan lebih mudah dan *aman*! 
  
 👉🏻 *Tambahkan saya ke Supergrup* dan atur saya sebagai Admin agar saya dapat bertindak!
  
@@ -367,7 +367,7 @@ def DaisyX_about_callback(update, context):
             f"\n\n*Versi Bot:* _2.0_"
             f"\n\nTerima kasih kepada *SaitamaRobot*, *DaisyX* dan semua manajer peladen lainnya, semua admin bot, semua *pendukung*, dan semua pengguna yang membantu kami dalam mengelola, *donatur*, dan semua pengguna yang melaporkan kesalahan atau fitur baru kepada kami."
             f"\n\nJuga terima kasih kepada *semua grup* yang menggunakan bot kami, kami terus belajar agar tidak copas doang!"
-            f"\n💡 Privacy policy",
+            f"\n💡 [Terms & Conditions](https://telegra.ph/Terms-and-Conditions-06-23)",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -411,7 +411,7 @@ def DaisyX_about_callback(update, context):
                         InlineKeyboardButton(text="➕Bantuan Lengkap➕",callback_data="help_back")
                     ],
                     [   
-                        InlineKeyboardButton(text="🔙Kembali", callback_data="aboutmanu_back")],
+                        InlineKeyboardButton(text="🔙Kembali", callback_data="aboutmanu_howto")],
                 ]
             ),
         )
@@ -424,7 +424,7 @@ def DaisyX_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_tac")]]
+                [[InlineKeyboardButton(text="Kembali ke bantuan", callback_data="aboutmanu_tac")]]
             ),
         )
 
@@ -433,13 +433,18 @@ def DaisyX_about_callback(update, context):
             text=f"*Perintah Dasar*"
             f"\n\n👮🏻Tersedia untuk Admin"
             f"\n🕵🏻Tersedia untuk Semua Anggota"
-            f"\n\nIf you are getting a message saying:"
-            f"\n<Code>You must be this chat administrator to perform this action!</code>"
-            f"\nThis has nothing to do with {dispatcher.bot.first_name}'s rights; this is all about YOUR permissions as an admin. {dispatcher.bot.first_name} respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with {dispatcher.bot.first_name}. Similarly, to change {dispatcher.bot.first_name} settings, you need to have the Change group info permission."
-            f"\n\nThe message very clearly says that you need these rights - <i>not {dispatcher.bot.first_name}.</i>",
+            f"\n\n👮🏻 `/admincache` memperbarui daftar Admin dan hak istimewanya"
+            f"\n\n🕵🏻  `/help` anda dapat melihat atau mengelola semua pengaturan Bot di pm"
+            f"\n\n👮🏻  `/ban` anda dapat memblokir pengguna dari grup tanpa memberinya kemungkinan untuk bergabung kembali menggunakan tautan grup"
+            f"\n\n👮🏻  `/mute` menempatkan pengguna dalam mode hanya-membaca. Dia bisa membaca tetapi tidak bisa mengirim pesan apapun"
+            f"\n\n👮🏻  `/kick` menendang pengguna dari grup, memberinya kemungkinan untuk bergabung kembali menggunakan tautan grup"
+            f"\n\n👮🏻  `/unban` menghapus blokiran pengguna dari grup dalam daftar blokiran, memberinya kemungkinan untuk bergabung kembali dengan tautan grup"
+            f"\n\n👮🏻  `/info` memberikan informasi tentang pengguna"
+            f"\n👮🏻  `/whois` mirip dengan `/info` tetapi lebih simpel"
+            f"\n\n◽️ `/admins` memberikan Daftar lengkap admin grup",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
+                [[InlineKeyboardButton(text="Kembali ke bantuan", callback_data="aboutmanu_howto")]]
             ),
         )
     elif query.data == "aboutmanu_spamprot":
@@ -454,10 +459,10 @@ def DaisyX_about_callback(update, context):
             "\n\n🛃 `/del` menghapus pesan yang dipilih"
             "\n🛃 `/purge` menghapus antara pesan yang dipilih sampai pesan saat ini"
             "\n\n◽️  `/reports [on/off]` mengubah pengaturan laporan, atau melihat status saat ini."
-            "\n\n👮🏻 /antispam [on/off] Mengatur keamanan antispam di grup. Ini akan membantu melindungi Anda dan grup Anda dengan menghapus pembanjir spam secepat mungkin",
+            "\n\n👮🏻 `/antispam [on/off]` Mengatur keamanan antispam di grup. Ini akan membantu melindungi Anda dan grup Anda dengan menghapus pembanjir spam secepat mungkin",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
+                [[InlineKeyboardButton(text="Kembali ke bantuan", callback_data="aboutmanu_howto")]]
             ),
         )  
     elif query.data == "aboutmanu_expert":
@@ -465,7 +470,7 @@ def DaisyX_about_callback(update, context):
             text=f"*Perintah Dasar*"
             f"\n\n👮🏻Tersedia untuk Admin"
             f"\n🕵🏻Tersedia untuk Semua Anggota"
-            f"\n\nIf you are getting a message saying:"
+            f"\n\n👮🏻 `/admincache` memperbarui daftar Admin dan hak istimewanya"
             f"\n<Code>You must be this chat administrator to perform this action!</code>"
             f"\nThis has nothing to do with {dispatcher.bot.first_name}'s rights; this is all about YOUR permissions as an admin. {dispatcher.bot.first_name} respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with {dispatcher.bot.first_name}. Similarly, to change {dispatcher.bot.first_name} settings, you need to have the Change group info permission."
             f"\n\nThe message very clearly says that you need these rights - <i>not {dispatcher.bot.first_name}.</i>",
@@ -574,7 +579,7 @@ def get_help(update, context):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
             ),
         )
 
