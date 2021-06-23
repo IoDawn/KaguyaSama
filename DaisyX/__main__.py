@@ -722,18 +722,16 @@ def get_settings(update: Update, context: CallbackContext):
     # ONLY send settings in PM
     if chat.type != chat.PRIVATE:
         if is_user_admin(chat, user.id):
-            text = "Click here to get this chat's settings, as well as yours."
+            text = "Dimana anda ingin membuka menu pengaturan"
             msg.reply_text(
                 text,
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(
-                                text="Settings",
-                                url="t.me/{}?start=stngs_{}".format(
-                                    context.bot.username, chat.id
-                                ),
-                            )
+                            InlineKeyboardButton(text="👤 Buka di pesan pribadi",url="t.me/{}?start=help".format(context.bot.username)")
+                        ],
+                        [   
+                            InlineKeyboardButton(text="👥 Buka Disini",  url="https://t.me/nothingspecialonhere/10")],
                         ]
                     ]
                 ),
