@@ -63,27 +63,30 @@ from DaisyX.modules.helper_funcs.misc import paginate_modules
 from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
-Hello there, I'm [𝓓𝓪𝓲𝓼𝔂 𝓧](https://telegra.ph/file/473cc17913393959e0667.jpg)
-
-I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot and I will help in managing your group
-
-✪ Make sure you read *INFO* Section Below ✪ 
+Hai {}! 
+Grup Manajer adalah Bot *yang paling lengkap* dan *gratis* untuk membantumu *mengelola* grup anda dengan lebih mudah dan *aman*! 
+ 
+👉🏻 *Tambahkan saya ke Supergrup* dan atur saya sebagai Admin agar saya dapat bertindak!
+ 
+❓ *APA PERINTAHNYA?* ❓
+Tekan /help untuk *melihat semua perintah* dan bagaimana mereka bekerja! 
 """
 
 buttons = [
-    [
-        InlineKeyboardButton(text="🚀 INFO 🚀", callback_data="aboutmanu_"),
+    [   InlineKeyboardButton(text="➕ Tambahkan ke grup ➕", url="t.me/GrupManajerBot?startgroup=start"),
+    ],
+    [   InlineKeyboardButton(text="👥 Grup", url="https://t.me/nothingspecialonhere/10"),
+        InlineKeyboardButton(text="Channel 📢", url="https://t.me/nothingspecialonhere/10"),
     ],
     [
-        InlineKeyboardButton(text="❓ Help & Commands ❓", callback_data="help_back"),
+        InlineKeyboardButton(text="🔧 Bantuan",callback_data="help_back"),
+        InlineKeyboardButton(text="Informasi 💬",callback_data="aboutmanu_"),   
     ],
-    [
-        InlineKeyboardButton(
-            text="💫 Add Daisy to your group 💫", url="t.me/daisyXBot?startgroup=true"
+    [    
+        InlineKeyboardButton(text="🇮🇩 Bahasa 🇮🇩",callback_data="help_back"
         ),
     ],
 ]
-
 
 HELP_STRINGS = f"""
 *Main Commands :* [🤖](https://telegra.ph/file/473cc17913393959e0667.jpg)
