@@ -411,7 +411,7 @@ def DaisyX_about_callback(update, context):
                         InlineKeyboardButton(text="➕Bantuan Lengkap➕",callback_data="help_back")
                     ],
                     [   
-                        InlineKeyboardButton(text="🔙Kembali", callback_data="aboutmanu_howto")],
+                        InlineKeyboardButton(text="🔙Kembali", callback_data="aboutmanu_back")],
                 ]
             ),
         )
@@ -510,10 +510,7 @@ def DaisyX_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(
-                            text="Credits", callback_data="aboutmanu_credit"
-                        ),
-                        InlineKeyboardButton(text="Back", callback_data="aboutmanu_"),
+                        InlineKeyboardButton(text="Kembali", callback_data="aboutmanu_"),
                     ]
                 ]
             ),
