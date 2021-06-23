@@ -400,21 +400,17 @@ def DaisyX_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(
-                            text="💁🏻‍♂Perintah dasar", callback_data="aboutmanu_permis"
-                        ),
-                        InlineKeyboardButton(
-                            text="🙋🏻‍♂Lanjutan", callback_data="aboutmanu_spamprot"
-                    [
-                        InlineKeyboardButton(
-                            text="🕵🏻Ahli", url="https://t.me/nothingspecialonhere/10"
-                        ),
-                        InlineKeyboardButton(
-                            text="💆🏻‍♂Panduan Pro", url="https://t.me/nothingspecialonhere/10"
-                    [
-                        InlineKeyboardButton(text="➕Bantuan Lengkap➕", callback_data="aboutmanu_howto")
+                        InlineKeyboardButton(text="💁🏻‍♂Perintah dasar", callback_data="aboutmanu_permis"),
+                        InlineKeyboardButton(text="🙋🏻‍♂Lanjutan", callback_data="aboutmanu_spamprot"),
                     ],
-                    [    
+                    [
+                        InlineKeyboardButton(text="🕵🏻Ahli", url="https://t.me/nothingspecialonhere/10"),
+                        InlineKeyboardButton(text="💆🏻‍♂Panduan Pro", url="https://t.me/nothingspecialonhere/10"),   
+                    ],
+                    [
+                        InlineKeyboardButton(text="➕Bantuan Lengkap➕",callback_data="help_back")
+                    ],
+                    [   
                         InlineKeyboardButton(text="🔙Kembali", callback_data="aboutmanu_back")],
                 ]
             ),
