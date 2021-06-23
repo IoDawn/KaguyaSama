@@ -728,7 +728,7 @@ def get_settings(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(text="👤 Buka di pesan pribadi",url="t.me/{}?start=help".format(context.bot.username)")
+                            InlineKeyboardButton(text="👤 Buka di pesan pribadi",url="https://t.me/nothingspecialonhere/10")
                         ],
                         [   
                             InlineKeyboardButton(text="👥 Buka Disini",  url="https://t.me/nothingspecialonhere/10")],   
