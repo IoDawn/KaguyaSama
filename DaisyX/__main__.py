@@ -63,7 +63,7 @@ from DaisyX.modules.helper_funcs.misc import paginate_modules
 from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
-Hai {}! 
+Hai {dispatcher.first_name}! 
 Grup Manajer adalah Bot *yang paling lengkap* dan *gratis* untuk membantumu *mengelola* grup anda dengan lebih mudah dan *aman*! 
  
 👉🏻 *Tambahkan saya ke Supergrup* dan atur saya sebagai Admin agar saya dapat bertindak!
@@ -363,11 +363,11 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"*😍 Hi again!  The name's {dispatcher.bot.first_name} 😍 \n\nAs  You I'm a next generational group management bot developed by Infinity_Bots.* "
-            f"\n\n 🔥 Join [Infinity_Bots](https://t.me/Infinity_Bots) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
-            f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
-            f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features [:)](https://telegra.ph/file/473cc17913393959e0667.jpg)"
-            f"\n\n👇 You Can Know More About Me By Clicking The Below Buttons 👇",
+            text=f"*Grup Manager* adalah Bot yang copas penampilan dari Grup Help dan hasil cloning dari beberapa repo manager yang ada, daring sejak 23 april 2020 dan terus diperbarui!"
+            f"\n\n*Versi Bot:* _2.0_"
+            f"\n\nTerima kasih kepada *SaitamaRobot*, *DaisyX* dan semua manajer peladen lainnya, semua admin bot, semua *pendukung*, dan semua pengguna yang membantu kami dalam mengelola, *donatur*, dan semua pengguna yang melaporkan kesalahan atau fitur baru kepada kami."
+            f"\n\nJuga terima kasih kepada semua grup yang menggunakan bot kami, kami terus belajar agar tidak copas doang!"
+            f"\n💡 Privacy policy",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -378,11 +378,6 @@ def DaisyX_about_callback(update, context):
                         ),
                         InlineKeyboardButton(
                             text="T & C", callback_data="aboutmanu_tac"
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="❔Help & Commands", callback_data="help_back"
                         )
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
