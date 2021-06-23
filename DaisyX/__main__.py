@@ -373,13 +373,19 @@ def DaisyX_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="Bantuan untuk bot", callback_data="help_back")
+                        InlineKeyboardButton(
+                            text="How To Use Me", callback_data="aboutmanu_howto"
+                        ),
+                        InlineKeyboardButton(
+                            text="T & C", callback_data="aboutmanu_tac"
+                        ),
                     ],
                     [
-                        InlineKeyboardButton(text="🔆 Perintah bot", callback_data="aboutmanu_howto")
+                        InlineKeyboardButton(
+                            text="❔Help & Commands", callback_data="help_back"
+                        )
                     ],
-                    [   
-                        InlineKeyboardButton(text="🔙Kembali", callback_data="aboutmanu_back")],
+                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
                 ]
             ),
         )
@@ -411,6 +417,18 @@ def DaisyX_about_callback(update, context):
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="aboutmanu_")],
                 ]
+            ),
+        )
+    elif query.data == "aboutmanu_credit":
+        query.message.edit_text(
+            text=f"*{dispatcher.bot.first_name} Is the redisigned version of Daisy and Naruto for the best performance.*"
+            f"\n\nBased on [Daisy](https://github.com/inukaasith/daisy) + [Naruto](https://github.com/imjanindu/narutorobot)."
+            f"\n\n{dispatcher.bot.first_name}'s source code was written by InukaASiTH and Imjanindu"
+            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @{SUPPORT_CHAT}.",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_tac")]]
             ),
         )
 
