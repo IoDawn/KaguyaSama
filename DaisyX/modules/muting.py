@@ -65,7 +65,7 @@ def mute(update: Update, context: CallbackContext) -> str:
         bot.restrict_chat_member(chat.id, user_id, chat_permissions)
         bot.sendMessage(
             chat.id,
-            f"<b>{html.escape(member.user.first_name)}</b>[<code>{mention_html(member.user.id)}</code>] telah 🔇 dibisukan.",
+            f"<b>{mention_html(member.user.id, member.user.first_name)}</b> telah 🔇 dibisukan.",
             parse_mode=ParseMode.HTML,
         )
         return log
