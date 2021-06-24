@@ -221,8 +221,10 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "Hai yang disana!\nSupaya bisa memberi pengaturan, gunakan `/settings` atau tekan tombol yang sesuai."
-            parse_mode=ParseMode.MARKDOWN,
+            "Saya sedang online!\n<b>Online sejak:</b> <code>{}</code>".format(
+                uptime
+            ),
+            parse_mode=ParseMode.HTML,
         )
 
 
