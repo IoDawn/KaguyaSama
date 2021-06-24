@@ -221,8 +221,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
-                uptime
+            "Hai yang disana!\nSupaya bisa memberi pengaturan, gunakan `/settings` atau tekan tombol yang sesuai."
             ),
             parse_mode=ParseMode.HTML,
         )
@@ -823,8 +822,8 @@ def main():
     # test_handler = CommandHandler("test", test)
     start_handler = CommandHandler("start", start, pass_args=True)
 
-    help_handler = CommandHandler("help", get_help)
-    help_callback_handler = CallbackQueryHandler(help_button, pattern=r"aboutmanu_howto")
+    help_handler = CommandHandler("help", aboutmanu_howto)
+    help_callback_handler = CallbackQueryHandler(help_button, pattern=r"help_")
 
     settings_handler = CommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
