@@ -89,13 +89,9 @@ buttons = [
 ]
 
 HELP_STRINGS = f"""
-*Main Commands :* [🤖](https://telegra.ph/file/473cc17913393959e0667.jpg)
-✪ /start: Starts me! You've probably already used this.
-✪ /help: Click this, I'll let you know about myself!
-✪ /donate: You can support my creater using this command.
-✪ /settings: 
-   ◔ in PM: will send you your settings for all supported modules.
-   ◔ in a Group: will redirect you to pm, with all that chat's settings.
+*PENGATURAN GRUP*
+
+_Pilih salah satu pengaturan yang ingin anda ubah._
 """.format(
     dispatcher.bot.first_name,
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
@@ -728,10 +724,13 @@ def get_settings(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(text="👤 Buka di pesan pribadi",url="https://t.me/nothingspecialonhere/10")
+                            InlineKeyboardButton(
+                                text="👤 Buka di pesan pribadi",
+                                url="t.me/{}?start=help".format(context.bot.username),
+                            )
                         ],
                         [   
-                            InlineKeyboardButton(text="👥 Buka Disini",  url="https://t.me/nothingspecialonhere/10")],   
+                            InlineKeyboardButton(text="👥 Buka Disini",callback_data="help_back")],   
                     ]
                 ),
             )
