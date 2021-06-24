@@ -65,13 +65,13 @@ def mute(update: Update, context: CallbackContext) -> str:
         bot.restrict_chat_member(chat.id, user_id, chat_permissions)
         bot.sendMessage(
             chat.id,
-            f"Muted <b>{html.escape(member.user.first_name)}</b> with no expiration date!",
+            f"{html.escape(member.user.first_name)}[<code>{html.escape(member.user.id)}</code>] telah 🔇 dibisukan.",
             parse_mode=ParseMode.HTML,
         )
         return log
 
     else:
-        message.reply_text("This user is already muted!")
+        message.reply_text("pengguna ini sudah dibisukan!")
 
     return ""
 
