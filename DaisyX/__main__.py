@@ -823,7 +823,7 @@ def main():
     # test_handler = CommandHandler("test", test)
     start_handler = CommandHandler("start", start, pass_args=True)
 
-    help_handler = CommandHandler("help", aboutmanu_howto)
+    help_handler = CommandHandler("help", get_help)
     help_callback_handler = CallbackQueryHandler(help_button, pattern=r"help_")
 
     settings_handler = CommandHandler("settings", get_settings)
