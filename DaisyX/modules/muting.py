@@ -65,7 +65,7 @@ def mute(update: Update, context: CallbackContext) -> str:
         bot.restrict_chat_member(chat.id, user_id, chat_permissions)
         bot.sendMessage(
             chat.id,
-            f"{html.escape(member.user.first_name)}[<code>{html.escape(member.user.id)}</code>] telah 🔇 dibisukan.",
+            f"<b>{html.escape(member.user.first_name)}</b>[<code>{mention_html(member.user.id)}</code>] telah 🔇 dibisukan.",
             parse_mode=ParseMode.HTML,
         )
         return log
@@ -117,7 +117,7 @@ def smute(update: Update, context: CallbackContext) -> str:
     )
 
     if reason:
-        log += f"\n<b>Reason:</b> {reason}"
+        log += f"\n<b>Alasan:</b> {reason}"
 
     if member.can_send_messages is None or member.can_send_messages:
         chat_permissions = ChatPermissions(can_send_messages=False)
@@ -153,7 +153,7 @@ def unmute(update: Update, context: CallbackContext) -> str:
             and member.can_send_other_messages
             and member.can_add_web_page_previews
         ):
-            message.reply_text("This user already has the right to speak.")
+            message.reply_text("Pengguna ini sudah memiliki hak untuk berbicara.")
         else:
             chat_permissions = ChatPermissions(
                 can_send_messages=True,
@@ -171,7 +171,7 @@ def unmute(update: Update, context: CallbackContext) -> str:
                 pass
             bot.sendMessage(
                 chat.id,
-                f"I shall allow <b>{html.escape(member.user.first_name)}</b> to text!",
+                f"<b>~{html.escape(member.user.first_name)} telah dibunyikan</b> ",
                 parse_mode=ParseMode.HTML,
             )
             return (
