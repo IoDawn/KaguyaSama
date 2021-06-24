@@ -540,19 +540,13 @@ def get_help(update, context):
             )
             return
         update.effective_message.reply_text(
-            "Contact me in PM to get the list of possible commands.",
+            "Penjelasan Perintah",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Help",
+                            text="Tekan disini",
                             url="t.me/{}?start=help".format(context.bot.username),
-                        )
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="Support Chat",
-                            url="https://t.me/{}".format(SUPPORT_CHAT),
                         )
                     ],
                 ]
@@ -830,7 +824,7 @@ def main():
     start_handler = CommandHandler("start", start, pass_args=True)
 
     help_handler = CommandHandler("help", get_help)
-    help_callback_handler = CallbackQueryHandler(help_button, pattern=r"help_")
+    help_callback_handler = CallbackQueryHandler(help_button, pattern=r"aboutmanu_howto")
 
     settings_handler = CommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
