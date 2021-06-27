@@ -404,8 +404,8 @@ def DaisyX_about_callback(update, context):
                         InlineKeyboardButton(text="💆🏻‍♂Panduan Pro", callback_data="aboutmanu_guide"),   
                     ],
                     [
-                        InlineKeyboardButton(text="➕Bantuan Lengkap➕",callback_data="help_back")
-                        InlineKeyboardButton(text="🔒Tutup Menu",callback_data="aboutmanu_tutup")
+                        InlineKeyboardButton(text="➕Bantuan Lengkap➕",callback_data="help_back"),
+                        InlineKeyboardButton(text="🔒Tutup Menu",callback_data="aboutmanu_tutup"),
                     ],
                     [   
                         InlineKeyboardButton(text="🔙Kembali", callback_data="aboutmanu_back")],
@@ -492,12 +492,12 @@ def DaisyX_about_callback(update, context):
         )
     elif query.data == "aboutmanu_tutup":
         query.message.edit_text(
-            text=f"*Menu Ditutup*"
+            text=f"*Menu Ditutup*🔒"
             f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Buka Menu🔑", callback_data="aboutmanu_howto")]]
+                [[InlineKeyboardButton(text="Buka 🔑", callback_data="aboutmanu_howto")]]
             ),
         )
     elif query.data == "aboutmanu_tac":
