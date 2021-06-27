@@ -412,16 +412,6 @@ def DaisyX_about_callback(update, context):
                 ]
             ),
         )
-    elif query.data == "aboutmanu_tutup":
-        query.message.edit_text(
-            text=f"*Menu Ditutup*🔒"
-            f"",
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Buka Menu🔑", callback_data="aboutmanu_howto")]]
-            ),
-        )
     elif query.data == "aboutmanu_credit":
         query.message.edit_text(
             text=f"*{dispatcher.bot.first_name} Is the redisigned version of Daisy and Naruto for the best performance.*"
@@ -498,6 +488,16 @@ def DaisyX_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
+            ),
+        )
+    elif query.data == "aboutmanu_tutup":
+        query.message.edit_text(
+            text=f"*Menu Ditutup*"
+            f"",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Buka Menu🔑", callback_data="aboutmanu_howto")]]
             ),
         )
     elif query.data == "aboutmanu_tac":
