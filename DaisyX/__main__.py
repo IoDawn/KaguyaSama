@@ -405,10 +405,95 @@ def DaisyX_about_callback(update, context):
                     ],
                     [
                         InlineKeyboardButton(text="➕Bantuan Lengkap➕",callback_data="help_back"),
-                        InlineKeyboardButton(text="🔒Tutup Menu",callback_data="aboutmanu_tutup"),
                     ],
                     [   
                         InlineKeyboardButton(text="🔙Kembali", callback_data="aboutmanu_back")],
+                ]
+            ),
+        )
+    elif query.data == "aboutmanu_helpgrup":
+        query.message.edit_text(
+            text=f"*Pengaturan Grup*"
+            f"\n\n_Pilih salah satu pengaturan yang ingin anda ubah._",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(text="Mute🔇", callback_data="aboutmanu_mute"),
+                        InlineKeyboardButton(text="Blok🚫", callback_data="aboutmanu_blok"),
+                    ],
+                    [
+                        InlineKeyboardButton(text="Tag📢", callback_data="aboutmanu_tag"),
+                        InlineKeyboardButton(text="Filters💬", callback_data="aboutmanu_filter"),   
+                    ],
+                    [
+                        InlineKeyboardButton(text="Warn⚠", callback_data="aboutmanu_warn"),
+                        InlineKeyboardButton(text="Bans⛔️", callback_data="aboutmanu_bans"),
+                    ],
+                    [
+                        InlineKeyboardButton(text="Rules📜", callback_data="aboutmanu_rules"),
+                        InlineKeyboardButton(text="Admin🧑🏻‍✈️", callback_data="aboutmanu_admin"),
+                    ],
+                    [
+                        InlineKeyboardButton(text="Notes📝", callback_data="aboutmanu_notes"),
+                        InlineKeyboardButton(text="Blacklist📓", callback_data="aboutmanu_blacklist"),   
+                    ],
+                    [
+                        InlineKeyboardButton(text="Captcha🧠", callback_data="aboutmanu_captcha"),
+                        InlineKeyboardButton(text="Welcome⛩", callback_data="aboutmanu_welcome"),
+                    ],
+                    [
+                        InlineKeyboardButton(text="Anti-Spam📨", callback_data="aboutmanu_spam"),
+                        InlineKeyboardButton(text="Anti-Flood⏳", callback_data="aboutmanu_flood"),   
+                    ],
+                    [
+                        InlineKeyboardButton(text="Mode Malam🌒",callback_data="aboutmanu_modemalam"),
+                    ],
+                    [
+                        InlineKeyboardButton(text="🔒Tutup", callback_data="aboutmanu_tutup"),
+                        InlineKeyboardButton(text="▶️Lain-Lain", callback_data="aboutmanu_nextgrup")],
+                ]
+            ),
+        )
+    elif query.data == "aboutmanu_nextgrup":
+        query.message.edit_text(
+            text=f"*Pengaturan Grup*"
+            f"\n\n_Pilih salah satu pengaturan yang ingin anda ubah._",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(text="Purge🗑", callback_data="aboutmanu_purge"),
+                    ],
+                    [
+                        InlineKeyboardButton(text="Stiker🎭", callback_data="aboutmanu_stiker"),   
+                    ],
+                    [
+                        InlineKeyboardButton(text="Musik🎧", callback_data="aboutmanu_musik"),
+                    ],
+                    [
+                        InlineKeyboardButton(text="Youtube🎬",callback_data="aboutmanu_youtube"),
+                    ],
+                    [
+                        InlineKeyboardButton(text="Koneksi🕹", callback_data="aboutmanu_koneksi"),
+                    ],
+                    [
+                        InlineKeyboardButton(text="Federasi🛂", callback_data="aboutmanu_federasi"),
+                    ],
+                    [
+                        InlineKeyboardButton(text="Pembersih🌀", callback_data="aboutmanu_pembersih"),   
+                    ],
+                    [
+                        InlineKeyboardButton(text="Force-Subs🔔", callback_data="aboutmanu_force"),
+                    ],
+                    [
+                        InlineKeyboardButton(text="📚Semua Perintah📚", callback_data="help_back"),
+                    ],
+                    [
+                        InlineKeyboardButton(text="◀️Kembali", callback_data="aboutmanu_helpgrup"),
+                        InlineKeyboardButton(text="🔒Tutup", callback_data="aboutmanu_tutup")],
                 ]
             ),
         )
