@@ -405,10 +405,21 @@ def DaisyX_about_callback(update, context):
                     ],
                     [
                         InlineKeyboardButton(text="➕Bantuan Lengkap➕",callback_data="help_back")
+                        InlineKeyboardButton(text="🔒Tutup Menu",callback_data="aboutmanu_tutup")
                     ],
                     [   
                         InlineKeyboardButton(text="🔙Kembali", callback_data="aboutmanu_back")],
                 ]
+            ),
+        )
+    elif query.data == "aboutmanu_tutup":
+        query.message.edit_text(
+            text=f"*Menu Ditutup*🔒"
+            f"",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Buka Menu🔑", callback_data="aboutmanu_howto")]]
             ),
         )
     elif query.data == "aboutmanu_credit":
