@@ -820,7 +820,7 @@ def get_settings(update: Update, context: CallbackContext):
                             )
                         ],
                         [   
-                            InlineKeyboardButton(text="👥 Buka Disini",callback_data="help_back")],   
+                            InlineKeyboardButton(text="👥 Buka Disini",callback_data="aboutmanu_helpgrup")],   
                     ]
                 ),
             )
