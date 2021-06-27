@@ -420,37 +420,38 @@ def DaisyX_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="Mute🔇", callback_data="aboutmanu_mute"),
-                        InlineKeyboardButton(text="Blok🚫", callback_data="aboutmanu_blok"),
+                        InlineKeyboardButton(text="Mute 🔇", callback_data="aboutmanu_mute"),
+                        InlineKeyboardButton(text="Blok 🚫", callback_data="aboutmanu_blok"),
                     ],
                     [
-                        InlineKeyboardButton(text="Tag📢", callback_data="aboutmanu_tag"),
-                        InlineKeyboardButton(text="Filters💬", callback_data="aboutmanu_filter"),   
+                        InlineKeyboardButton(text="Tag 📢", callback_data="aboutmanu_tag"),
+                        InlineKeyboardButton(text="Filters 💬", callback_data="aboutmanu_filter"),   
                     ],
                     [
-                        InlineKeyboardButton(text="Warn⚠", callback_data="aboutmanu_warn"),
-                        InlineKeyboardButton(text="Bans⛔️", callback_data="aboutmanu_bans"),
+                        InlineKeyboardButton(text="Warn ⚠", callback_data="aboutmanu_warn"),
+                        InlineKeyboardButton(text="Bans ⛔️", callback_data="aboutmanu_bans"),
                     ],
                     [
-                        InlineKeyboardButton(text="Rules📜", callback_data="aboutmanu_rules"),
-                        InlineKeyboardButton(text="Admin🧑🏻‍✈️", callback_data="aboutmanu_admin"),
+                        InlineKeyboardButton(text="Rules 📜", callback_data="aboutmanu_rules"),
+                        InlineKeyboardButton(text="Admin 🧑🏻‍✈️", callback_data="aboutmanu_admin"),
                     ],
                     [
                         InlineKeyboardButton(text="Notes📝", callback_data="aboutmanu_notes"),
-                        InlineKeyboardButton(text="Blacklist📓", callback_data="aboutmanu_blacklist"),   
+                        InlineKeyboardButton(text="Blacklist 📓", callback_data="aboutmanu_blacklist"),   
                     ],
                     [
-                        InlineKeyboardButton(text="Captcha🧠", callback_data="aboutmanu_captcha"),
-                        InlineKeyboardButton(text="Welcome⛩", callback_data="aboutmanu_welcome"),
+                        InlineKeyboardButton(text="Captcha 🧠", callback_data="aboutmanu_captcha"),
+                        InlineKeyboardButton(text="Welcome ⛩", callback_data="aboutmanu_welcome"),
                     ],
                     [
-                        InlineKeyboardButton(text="Anti-Spam📨", callback_data="aboutmanu_spam"),
-                        InlineKeyboardButton(text="Anti-Flood⏳", callback_data="aboutmanu_flood"),   
+                        InlineKeyboardButton(text="Anti-Spam 📨", callback_data="aboutmanu_spam"),
+                        InlineKeyboardButton(text="Anti-Flood ⏳", callback_data="aboutmanu_flood"),   
                     ],
                     [
-                        InlineKeyboardButton(text="Mode Malam🌒",callback_data="aboutmanu_modemalam"),
+                        InlineKeyboardButton(text="Mode Malam 🌒",callback_data="aboutmanu_modemalam"),
                     ],
                     [
+                        InlineKeyboardButton(text="📚All Cmd", callback_data="help_back"),
                         InlineKeyboardButton(text="🔒Tutup", callback_data="aboutmanu_tutup"),
                         InlineKeyboardButton(text="▶️Lain-Lain", callback_data="aboutmanu_nextgrup")],
                 ]
@@ -489,11 +490,9 @@ def DaisyX_about_callback(update, context):
                         InlineKeyboardButton(text="Force-Subs🔔", callback_data="aboutmanu_force"),
                     ],
                     [
-                        InlineKeyboardButton(text="📚Semua Perintah📚", callback_data="help_back"),
-                    ],
-                    [
                         InlineKeyboardButton(text="◀️Kembali", callback_data="aboutmanu_helpgrup"),
-                        InlineKeyboardButton(text="🔒Tutup", callback_data="aboutmanu_tutup")],
+                        InlineKeyboardButton(text="🔒Tutup", callback_data="aboutmanu_tutup"),
+                        InlineKeyboardButton(text="📚All Cmd", callback_data="help_back")],
                 ]
             ),
         )
@@ -582,7 +581,7 @@ def DaisyX_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Buka 🔑", callback_data="aboutmanu_howto")]]
+                [[InlineKeyboardButton(text="Buka 🔑", callback_data="aboutmanu_helpgrup")]]
             ),
         )
     elif query.data == "aboutmanu_tac":
