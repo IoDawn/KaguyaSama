@@ -221,10 +221,20 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "Saya sedang online!\n<b>Online sejak:</b> <code>{}</code>".format(
-                uptime
+        query.message.edit_text(
+            text=f"Hai yang disana!"
+            f"\nSupaya bisa memberi pengaturan, gunakan `/settings` atau tekan tombol yang sesuai.",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(text="⚙ Pengaturan", callback_data="aboutmanu_helpgrup")
+                    ],
+                    [   
+                        InlineKeyboardButton(text="🔆 Perintah bot", callback_data="aboutmanu_howto")],
+                ]
             ),
-            parse_mode=ParseMode.HTML,
         )
 
 
@@ -581,7 +591,7 @@ def DaisyX_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Buka 🔑", callback_data="aboutmanu_helpgrup")]]
+                [[InlineKeyboardButton(text="Buka", callback_data="aboutmanu_helpgrup")]]
             ),
         )
     elif query.data == "aboutmanu_tac":
